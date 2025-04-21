@@ -3,12 +3,18 @@ pipeline{
     stages{
 
         stage("setup"){
-            sh "pip3 install -r sam-app/tests/requirements.txt"
+            steps{
+                sh "pip3 install -r sam-app/tests/requirements.txt"
+            }
+            
         }
 
         stage("test"){
-            sh "pytest"
+            steps{
+                sh "pytest"
+            }
         }
+        
         stage("build"){
             steps {
                 sh "sam build -t sam-app/template.yaml"
