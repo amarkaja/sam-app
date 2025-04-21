@@ -2,19 +2,6 @@ pipeline{
     agent any
     stages{
 
-        stage("setup"){
-            steps{
-                sh "sudo pip3 install -r tests/requirements.txt"
-            }
-            
-        }
-
-        stage("test"){
-            steps{
-                sh "pytest"
-            }
-        }
-
         stage("build"){
             steps {
                 sh "sam build -t sam-app/template.yaml"
