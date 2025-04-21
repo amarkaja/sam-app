@@ -22,7 +22,7 @@ pipeline{
                    --stack-name my-sam-stack \
                    --capabilities CAPABILITY_IAM \
                    --region us-east-1 \
-                   --s3-bucket my-sam-deployments-bucket-amarkaja
+                   --resolve-s3
                 '''
             }
 
