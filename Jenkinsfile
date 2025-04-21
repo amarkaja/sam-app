@@ -4,7 +4,7 @@ pipeline{
 
         stage("build"){
             steps {
-                sh "sam build -t sam-app/template.yaml"
+                sh "sam build -t template.yaml"
             }
         }
 
