@@ -16,13 +16,13 @@ pipeline{
             }   
             steps{
                 sh '''
-                aws s3 mb s3://my-sam-deployments-bucket
+                aws s3 mb s3://my-sam-deployments-bucket-amarkaja
                 sam deploy --no-confirm-changeset \
                    --no-fail-on-empty-changeset \
                    --stack-name my-sam-stack \
                    --capabilities CAPABILITY_IAM \
                    --region us-east-1 \
-                   --s3-bucket my-sam-deployments-bucket
+                   --s3-bucket my-sam-deployments-bucket-amarkaja
                 '''
             }
 
